@@ -10,9 +10,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <header></header>
-
   <body>
+    <header>
+      <h4 id="logo"><%=link_to 'Pajama party',"/" %></h4>
+      
+      <ul>
+        <li>ログイン</li>
+        <li>新規登録</li>
+        <li>パジャマの歴史</li>
+        <li>問い合わせ</li>
+      </ul>
+    </header>
     <%= yield %>
   </body>
 </html>
