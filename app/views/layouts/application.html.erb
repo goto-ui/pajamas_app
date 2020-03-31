@@ -11,16 +11,30 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
-      <h4 id="logo"><%=link_to 'Pajama party',"/" %></h4>
-      
-      <ul>
-        <li>ログイン</li>
-        <li>新規登録</li>
-        <li>パジャマの歴史</li>
-        <li>問い合わせ</li>
-      </ul>
-    </header>
-    <%= yield %>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <h1><%=link_to 'Pajama party','/',id:'logo' %></h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-2">
+              <%=link_to 'ログイン','#'%>
+            </li>
+            <li class="nav-item ml-2">
+              <%=link_to '新規登録','#'%>
+            </li>
+            <li class="nav-item ml-2">
+              <%=link_to 'パジャマの歴史','#'%>
+            </li>
+            <li class="nav-item ml-2">
+              <%=link_to '問い合わせ','#'%>
+            </li>
+          </ul>
+      </div>
+  </nav>
+    <main class="container">
+      <%= yield %>
+    </main>
   </body>
 </html>
