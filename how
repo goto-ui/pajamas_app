@@ -1,0 +1,59 @@
+[33mcommit 8383a1823fd5a5e25b031c49d43c0bc51a87d420[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;32mUser_username_add[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Wed Apr 1 03:24:06 2020 +0000
+
+    Userモデルにusername追加
+
+[33mcommit aadefb3a04b104e074dd0a0148c47e50005dc81a[m[33m ([m[1;32mjapones[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Wed Apr 1 01:38:36 2020 +0000
+
+    最低限のdevise日本語化
+
+[33mcommit be180648fbd13b1c89a11ec5499aa22beee50519[m[33m ([m[1;32mdevise_user_view_controller_setting[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Wed Apr 1 01:35:17 2020 +0000
+
+    Userモデルのviewとcontroller作成ルートも
+
+[33mcommit 9a7a875e1886e89e52b9235f6808888982379f4b[m[33m ([m[1;32mmail_setting[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Wed Apr 1 01:16:23 2020 +0000
+
+    メール認証の実装
+
+[33mcommit b890a44cb31e0756852a4d0c4e73053ac44075aa[m[33m ([m[1;32mgem_config_add[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Wed Apr 1 00:56:32 2020 +0000
+
+    gem:conigを追加,
+
+[33mcommit eca0a54dfe5411bb8ab192cf7404a99e8f63f66c[m[33m ([m[1;32mdevise_add[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Wed Apr 1 00:47:14 2020 +0000
+
+    deviseを導入して、headerも変えました
+
+[33mcommit a12e0246f5e570a06b509b9351861908d750a11e[m[33m ([m[1;32mboostrap_add[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Tue Mar 31 13:38:11 2020 +0000
+
+    rails5にbootstrap4を使えるようにして,home/viewにhistory,infoを追加しました
+
+[33mcommit 8d96d276de70c6b14e8ea4a0ce2ef4f082558878[m[33m ([m[1;32mindex_header[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Tue Mar 31 08:08:51 2020 +0000
+
+    index.html.erbを内容更新、headerを作成
+
+[33mcommit 4373c516c58ed5f2bc8d14618c9f212757c9b00e[m[33m ([m[1;32mpajama_index[m[33m)[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Tue Mar 31 07:50:34 2020 +0000
+
+    home#indexのルートを決めて、homeコントローラーを作り、軽くindex.html.erbを書きました。
+
+[33mcommit 0cae6776049e209d1180ffccd94ba2daf6f22698[m
+Author: goto-ui <onion753@gmail.com>
+Date:   Tue Mar 31 07:12:17 2020 +0000
+
+    first commit

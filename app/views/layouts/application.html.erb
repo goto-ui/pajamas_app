@@ -15,7 +15,7 @@
     <p class="alert"><%= alert %></p>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <h1><%=link_to 'Pajama party','/',id:'logo' %></h1>
+        <h1><%=link_to 'Pajama party',root_path,id:'logo' %></h1>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,7 +24,7 @@
             <% if user_signed_in? %> 
               Logged in as <strong><%= current_user.email %></strong>.
               <li class="nav-item ml-2">
-                <%=link_to 'パジャマの歴史','/home'%>
+                <%=link_to 'パジャマの歴史','/history'%>
               </li>
               <li class="nav-item ml-2">
                 <%=link_to '問い合わせ','/info'%>
@@ -33,13 +33,13 @@
                 <%=link_to '投稿','#'%>
               </li>
               <li class="nav-item ml-2">
-                <%=link_to '一覧表示','/show'%>
+                <%=link_to '一覧表示','#'%>
               </li>
               <li class="nav-item ml-2">
                 <%=link_to 'プロフィール', edit_user_registration_path %>
               </li>
               <li class="nav-item ml-2">
-                <%=link_to 'ログアウト', sign_out_path %>
+               <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
               </li>
             <% else %>
               <li>

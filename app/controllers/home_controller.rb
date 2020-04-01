@@ -9,6 +9,4 @@ class HomeController < ApplicationController
   def info
   end
   
-  def show
-  end
 end
