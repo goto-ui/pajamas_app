@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   root 'home#index'
   get  '/info',    to: 'home#info'
   get  '/history',    to: 'home#history'
+  get  '/all_users', to:'users#all_users'
 end

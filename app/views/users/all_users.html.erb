@@ -1,0 +1,11 @@
+<div class="row">
+  <%@users.each do |user|%>
+    <div class="col-lg-4 col-sm-6 mb-3">
+      <div>
+        <%= user.id%>
+        <%= user.name%>
+        <%= user.email%>
+      </div>
+    </div>
+  <% end %>
+</div>
