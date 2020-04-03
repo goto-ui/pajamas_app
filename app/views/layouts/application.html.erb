@@ -16,7 +16,7 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
         <% if user_signed_in? %> 
-          <h1><%=link_to 'Pajama party',all_users_path,id:'logo' %></h1>
+          <h1><%=link_to 'Pajama party',posts_show_path,id:'logo' %></h1>
         <%else%>
           <h1><%=link_to 'Pajama party',root_path,id:'logo' %></h1>
         <%end%>
@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-2">
             <% if user_signed_in? %> 
-              Logged in as <strong id="current"><%= current_user.email %></strong>.
+              Logged in as <strong id="current"><%= current_user.name %></strong>.
               <li class="nav-item ml-2">
                 <%=link_to 'パジャマの歴史',history_path%>
               </li>
@@ -34,13 +34,16 @@
                 <%=link_to '問い合わせ',info_path%>
               </li>
               <li class="nav-item ml-2">
-                <%=link_to '投稿する','#'%>
+                <%=link_to '投稿する',microposts_new_path%>
               </li>
               <li class="nav-item ml-2">
-                <%=link_to '投稿一覧',all_users_path %>
+                <%=link_to '投稿記事一覧',posts_show_path%>
               </li>
               <li class="nav-item ml-2">
-                <%=link_to 'プロフィール', user_path(current_user)%>
+                <%=link_to '投稿者一覧',all_users_path %>
+              </li>
+              <li class="nav-item ml-2">
+                <%=link_to 'プロフィール', prof_path(current_user)%>
               </li>
               <li class="nav-item ml-2">
                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
