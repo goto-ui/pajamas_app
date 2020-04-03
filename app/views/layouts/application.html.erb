@@ -15,7 +15,11 @@
     <p class="alert"><%= alert %></p>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <h1><%=link_to 'Pajama party',root_path,id:'logo' %></h1>
+        <% if user_signed_in? %> 
+          <h1><%=link_to 'Pajama party',all_users_path,id:'logo' %></h1>
+        <%else%>
+          <h1><%=link_to 'Pajama party',root_path,id:'logo' %></h1>
+        <%end%>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -30,10 +34,10 @@
                 <%=link_to '問い合わせ',info_path%>
               </li>
               <li class="nav-item ml-2">
-                <%=link_to '投稿','#'%>
+                <%=link_to '投稿する','#'%>
               </li>
               <li class="nav-item ml-2">
-                <%=link_to '一覧表示',all_users_path %>
+                <%=link_to '投稿一覧',all_users_path %>
               </li>
               <li class="nav-item ml-2">
                 <%=link_to 'プロフィール', user_path(current_user)%>

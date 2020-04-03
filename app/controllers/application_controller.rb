@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
   # 新規登録後のリダイレクト先をマイページへ
   def after_sign_in_path_for(resource)
     if current_user
-      flash[:notice] = "ログインに成功しました" 
-      root_url  #　指定したいパスに変更
+      flash[:notice] = #ログインに成功しました" 
+      all_users_path  #　投稿一覧ページに飛ぶ
     else
       flash[:notice] = "新規登録完了しました。次に名前を入力してください" 
-      users_show_path  #　指定したいパスに変更
+      users_show_path  #　プロフィール画面に飛ぶ
     end
   end
 
