@@ -3,6 +3,8 @@
   <%@microposts.each do |post|%>
     <div class="col-lg-4 col-sm-6 mb-3">
       <div>
+        <%=post.user_id%>
+        <br>
         <%= post.content%>
       </div>
     </div>

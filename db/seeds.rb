@@ -13,3 +13,20 @@ User.create!(name:  "testユーザー",
                password:              password,
                password_confirmation: password)
 end
+
+message = [ 
+            "今日はお揃いのパジャマで寝ます。",
+            "人生で初めてちゃんとした部屋着買いました。",
+            "何かいい部屋着ないですか。",
+            "あのブランドから出た部屋着可愛いですよね。",
+            "マジうける",
+            "部屋着なんて適当でいいと思っててごめん",
+            "ジェラピケ最高。",
+            "男だけどパジャマにこだわってるよ",
+            "このサイト面白いと思う",
+            "真剣にこのサイト見てます"
+          ]
+id = [1,2,3,4,5,6,7,8,9,10]
+10.times do |n|
+  @micropost = Micropost.create!(content: message[n],user_id: id[n])
+end
