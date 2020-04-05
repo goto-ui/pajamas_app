@@ -8,6 +8,15 @@
         <%= image_tag post.picture.url if post.picture? %>
         <br>
         <%= post.content%>
+        <br>
+        <span class="timestamp">
+          投稿時間:<%= post.created_at %>前
+          <br>
+          <% if current_user.id == post.user_id %>
+            <%= button_to "削除",post, method: :delete,
+                                             data: { confirm: "削除してもいいですか？" } %>
+          <% end %>
+        </span>
       </div>
     </div>
   <% end %>

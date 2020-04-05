@@ -20,4 +20,13 @@ class ApplicationController < ActionController::Base
     # サインアップ時にnameのストロングパラメータを追加
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
+  
+  private
+    # ログイン済みユーザーかどうか確認
+  def logged_in_user
+    unless !current_user.nil?
+      flash[:danger] = "Please log in."
+      redirect_to login_url
+    end
+  end
 end
