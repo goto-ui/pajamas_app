@@ -14,6 +14,10 @@ class MicropostsController < ApplicationController
       render 'microposts/new'
     end
   end
+  
+  def micropost_params
+    params.require(:micropost).permit(:content, :picture)
+  end
 
   # def destroy
   #   @micropost.destroy
@@ -24,7 +28,7 @@ class MicropostsController < ApplicationController
   private
 
     def micropost_params
-      params.require(:micropost).permit(:content)
+     params.require(:micropost).permit(:content, :picture)
     end
     
   #   def correct_user

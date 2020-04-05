@@ -5,6 +5,8 @@
       <div>
         <%=post.user_id%>
         <br>
+        <%= image_tag post.picture.url if post.picture? %>
+        <br>
         <%= post.content%>
       </div>
     </div>
