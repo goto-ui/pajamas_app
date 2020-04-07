@@ -1,6 +1,8 @@
 ja:
   activerecord:
     attributes:
+      micropost:
+        content: "投稿内容"
       user:
         current_password: "現在のパスワード"
         email: "メールアドレス"
@@ -18,6 +20,12 @@ ja:
             email:
               blank: "が空になっています"
             name:
+              blank: "が空になっています"
+            current_password:
+              blank: "が空になっています"
+        micropost:
+          attributes:
+            content:
               blank: "が空になっています"
   devise:
     confirmations:
