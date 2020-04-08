@@ -21,6 +21,12 @@
   <div class="actions">
     <%= f.submit "ログイン" %>
   </div>
+  
+    <%= f.hidden_field :email, value: "gest@pajama.org" %>
+  <%= f.hidden_field :password, value: "pajama_gest" %>
+  <%= f.submit "かんたんログイン", class:"btn btn-lg center-block btn-success"%> 
+  
 <% end %>
+
 
 <%= render "devise/shared/links" %>

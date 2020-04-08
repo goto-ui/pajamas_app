@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
   resources :users
   resources :microposts,only: [:create, :destroy]
+  resources :testsessions, only: :create
   root 'home#index'
   get  '/info',    to: 'home#info'
   get  '/history',    to: 'home#history'

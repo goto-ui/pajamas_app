@@ -16,6 +16,7 @@ gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 gem 'sqlite3'
 gem 'carrierwave'
 gem 'fog-aws'
+gem 'dotenv-rails'
 gem 'rmagick'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'

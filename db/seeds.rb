@@ -3,6 +3,11 @@ User.create!(name:  "testユーザー",
              password:              "pajama",
              password_confirmation: "pajama")
 
+User.create!(name:  "gestユーザー",
+             email: "gest@pajama.org",
+             password:              "pajama_gest",
+             password_confirmation: "pajama_gest")
+
 30.times do |n|
   gimei  = Gimei.name
   name = gimei.romaji

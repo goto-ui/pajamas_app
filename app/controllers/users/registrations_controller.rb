@@ -3,7 +3,7 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
-
+  before_action :forbid_test_user, {only: [:edit,:update,:destroy]}
   # GET /resource/sign_up
   def new
     super
@@ -48,6 +48,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # If you have extra params to permit, append them to the sanitizer.
   def configure_account_update_params
     devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name])
   end
 
   # The path used after sign up.
@@ -59,4 +60,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def after_inactive_sign_up_path_for(resource)
     super(resource)
   end
+  
+  private
+  def forbid_test_user
+      if @user.email == "gest@pajama.org"
+        flash[:notice] = "ゲストユーザーのため変更できません"
+        redirect_to posts_show_path
+      end
+  end
+  
 end
